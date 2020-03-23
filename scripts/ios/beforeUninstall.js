@@ -1,8 +1,8 @@
 module.exports = function(ctx) {  
     console.log("iosBeforeUninstall");
     
-    var path = ctx.requireCordovaModule('path'),
-        fs = ctx.requireCordovaModule('fs'),
+    var path = ctx.require('path'),
+        fs = ctx.require('fs'),
         projectRoot = ctx.opts.projectRoot,
         deferral = ctx.requireCordovaModule('q').defer(),
         plugins = ctx.opts.plugins || [];
