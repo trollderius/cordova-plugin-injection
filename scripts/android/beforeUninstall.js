@@ -1,9 +1,9 @@
 module.exports = function(ctx) {  
     console.log("android before uninstall");
-    var path = ctx.requireCordovaModule('path'),
-        fs = ctx.requireCordovaModule('fs'),
+    var path = require('path'),
+        fs = require('fs'),
         projectRoot = ctx.opts.projectRoot,
-        deferral = ctx.requireCordovaModule('q').defer(),
+        deferral = require('q').defer(),
         plugins = ctx.opts.plugins || [];
 
     var ConfigParser = null;  

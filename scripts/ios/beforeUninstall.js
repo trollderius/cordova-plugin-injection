@@ -1,10 +1,10 @@
 module.exports = function(ctx) {  
     console.log("iosBeforeUninstall");
     
-    var path = ctx.require('path'),
-        fs = ctx.require('fs'),
+    var path = require('path'),
+        fs = require('fs'),
         projectRoot = ctx.opts.projectRoot,
-        deferral = ctx.requireCordovaModule('q').defer(),
+        deferral = require('q').defer(),
         plugins = ctx.opts.plugins || [];
 
     var ConfigParser = null;  
